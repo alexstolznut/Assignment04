@@ -1,5 +1,5 @@
 /*eslint-env browser*/
-var storage;
+
 
 function showMenu() {
     "use strict";
