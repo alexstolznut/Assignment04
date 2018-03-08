@@ -14,7 +14,7 @@ function showMenu() {
 
 function viewAllProducts(inventory) {
     "use strict";
-    storage = localStorage.getItem("array");
+    
     var sku1, sku2, sku3, sku4, sku5, product1, product2, product3, product4, product5, quantity1, quantity2, quantity3, quantity4, quantity5, cost1, cost2, cost3, cost4, cost5;
     sku1 = inventory[0][0][1];
     sku2 = inventory[1][0][1];
@@ -49,20 +49,51 @@ function viewAllProducts(inventory) {
 
 
 
-
-    if (storage.length === 0) {
+//    if (storage === null) {
         skuArray = skuArray.sort();
-        for (var i in skuArray) {
+        for (var i in skuArray) 
             window.console.log(skuArray[i].join(" ").toString());
-        }
-    } else {
-        skuArray = storage.join(" ");
-        skuArray = skuArray.sort();
-        window.console.log(skuArray[0].join(" "). toString());
-        for (var x in skuArray) {
-            window.console.log(skuArray[x].join(" ").toString());
-        }
-    }
+        
+//    } else {
+//        storage = localStorage.getItem("array");
+////        skuArray = storage;
+////        sku1 = storage[0][0][1];
+////    sku2 = storage[1][0][1];
+////    sku3 = storage[2][0][1];
+////    sku4 = storage[3][0][1];
+////    sku5 = storage[4][0][1];
+////
+////    product1 = storage[0][1][1];
+////    product2 = storage[1][1][1];
+////    product3 = storage[2][1][1];
+////    product4 = storage[3][1][1];
+////    product5 = storage[4][1][1];
+////
+////    quantity1 = "(" + storage[0][2][1] + ")";
+////    quantity2 = "(" + storage[1][2][1] + ")";
+////    quantity3 = "(" + storage[2][2][1] + ")";
+////    quantity4 = "(" + storage[3][2][1] + ")";
+////    quantity5 = "(" + storage[4][2][1] + ")";
+////
+////    cost1 = "$" + storage[0][3][1];
+////    cost2 = "$" + storage[1][3][1];
+////    cost3 = "$" + storage[2][3][1];
+////    cost4 = "$" + storage[3][3][1];
+////    cost5 = "$" + storage[4][3][1];
+////
+////        firstItem = [sku1, product1, quantity1, cost1],
+////        secondItem = [sku2, product2, quantity2, cost2],
+////        thirdItem = [sku3, product3, quantity3, cost3],
+////        fourthItem = [sku4, product4, quantity4, cost4],
+////        fifthItem = [sku5, product5, quantity5, cost5],
+////        skuArray = [firstItem, secondItem, thirdItem, fourthItem, fifthItem];
+////        window.console.log(skuArray);
+////        skuArray = skuArray;
+////        window.console.log(skuArray[0].join(" "). toString());
+////        for (var x in skuArray) {
+////            window.console.log(skuArray[x].toString());
+////        }
+//    }
 
 }
 
@@ -81,35 +112,35 @@ function updateSkuNumber(array) {
             var tempQuant1 = window.prompt("Please enter new quantity");
             if (tempQuant1 !== isNaN || tempQuant1 !== null) {
                 array[0][2][1] = tempQuant1;
-                localStorage.array = array.join(" ");
+                localStorage.array = array;
                 //                return array.splice(0, 2, 1, tempQuant1);
             }
         } else if (skuNumber === sku2) {
             var tempQuant2 = window.prompt("Please enter new quantity");
             if (tempQuant2 !== isNaN || tempQuant2 !== null) {
                 array[1][2][1] = tempQuant2;
-                localStorage.array = array.join(" ");
+                localStorage.array = array;
                 //                return array.splice(1, 2, 1, tempQuant2);
             }
         } else if (skuNumber === sku3) {
             var tempQuant3 = window.prompt("Please enter new quantity");
             if (tempQuant3 !== isNaN || tempQuant3 !== null) {
                 array[2][2][1] = tempQuant3;
-                localStorage.array = array.join(" ");
+                localStorage.array = array;
                 //                return array.splice(2, 2, 1, tempQuant3);
             }
         } else if (skuNumber === sku4) {
             var tempQuant4 = window.prompt("Please enter new quantity");
             if (tempQuant4 !== isNaN || tempQuant4 !== null) {
                 array[3][2][1] = tempQuant4;
-                localStorage.array = array.join(" ");
+                localStorage.array = array;
                 //                return array.splice(3, 2, 1, tempQuant4);
             }
         } else if (skuNumber === sku5) {
             var tempQuant5 = window.prompt("Please enter new quantity");
             if (tempQuant5 !== isNaN || tempQuant5 !== null) {
                 array[4][2][1] = tempQuant5;
-                localStorage.array = array.join(" ");
+                localStorage.array = array;
 
             }
         }
